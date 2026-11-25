@@ -1,0 +1,36 @@
+# Mode Policy Presets (Editable)
+# Override any numeric threshold or budget here without editing core skills.
+
+policies:
+  balanced:
+    description: "Default quality-per-token balance."
+    stop_threshold_delta: 0.0
+    max_examples_v1: 3
+    phase4_max_score_drop: 0.10
+    allow_hard_fail_relaxation: false
+    prefer_structured_output: "when_consumer_is_code"
+    require_real_runs_for_high_risk: true
+
+  strict:
+    description: "Favor quality and safety over token savings (triggered by 'strict')."
+    stop_threshold_delta: 0.20 # capped at 4.90
+    max_examples_v1: 3
+    phase4_max_score_drop: 0.05 # revert if drop > 0.05
+    allow_hard_fail_relaxation: false
+    prefer_structured_output: "when_consumer_is_code"
+    require_real_runs_for_high_risk: true
+    extra_rules:
+      - "Prefer explicit abstention over partial guesses."
+      - "Skip Phase 4 compression if margin above stop threshold < 0.15."
+
+  lean:
+    description: "Favor minimal prompt and output tokens without sacrificing hard fails (triggered by 'lean')."
+    stop_threshold_delta: 0.0
+    max_examples_v1: 1 # 0 preferred unless format drift occurs
+    phase4_max_score_drop: 0.10
+    allow_hard_fail_relaxation: false # NEVER relax hard fails
+    prefer_structured_output: "always_when_feasible"
+    require_real_runs_for_high_risk: true
+    extra_rules:
+      - "Enforce strict output token/word cap starting in Prompt v1."
+      - "Prioritize tier-fast model + escalation and static-prefix caching in Token Report."

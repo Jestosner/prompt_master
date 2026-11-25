@@ -1,0 +1,16 @@
+{
+  "entries": [
+    {
+      "path": "skills",
+      "include_only": [
+        "prompt-architect",
+        "workflow-profile",
+        "evaluator-builder",
+        "testset-builder",
+        "eval-runner",
+        "drift-monitor",
+        "domain-packs"
+      ]
+    }
+  ]
+}

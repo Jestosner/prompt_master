@@ -1,0 +1,17 @@
+{
+  "entries": [
+    {
+      "path": "skills",
+      "include_only": [
+        "prompt-architect",
+        "workflow-profile",
+        "intake-interviewer",
+        "prompt-builder",
+        "evaluator-builder",
+        "testset-builder",
+        "token-auditor",
+        "domain-packs"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "entries": [
+    {
+      "path": "skills",
+      "include_only": [
+        "prompt-architect",
+        "workflow-profile",
+        "eval-runner",
+        "token-auditor",
+        "token-optimizer",
+        "mode-policies"
+      ]
+    }
+  ]
+}

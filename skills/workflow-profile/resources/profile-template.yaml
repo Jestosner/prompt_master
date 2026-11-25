@@ -1,0 +1,29 @@
+# Workflow Profile (Pasteable State Block)
+# Load with: profile: <paste this block>
+
+workflow_profile:
+  phase: intake # intake | build | iterate | optimize | deliver
+  mode: balanced # balanced | strict | lean
+  active_version: none # e.g., v1, v2, v2-opt1
+  domain_pack: none # none | code-and-structured | customer-facing | high-risk-regulated | custom
+
+  TASK: ""
+  INPUT: ""
+  OUTPUT: ""
+  QUALITY_BAR:
+    excellent: ""
+    acceptable: ""
+    fail: ""
+    top_3_failure_modes:
+      - ""
+      - ""
+      - ""
+    stop_threshold: null # auto from RISK_LEVEL if null (low: 4.0, medium: 4.3, high: 4.7)
+  CONSTRAINTS: ""
+  MODEL_ENV: ""
+  VOLUME_COST: ""
+  EXISTING_ASSETS: ""
+  RISK_LEVEL: "" # low | medium | high
+
+  assumptions_star: [] # list of assumed (★) defaults
+  unknowns: [] # remaining high-impact gaps

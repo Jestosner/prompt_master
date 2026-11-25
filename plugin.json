@@ -1,0 +1,15 @@
+{
+  "name": "prompt-master",
+  "displayName": "Prompt Master",
+  "version": "1.0.0",
+  "author": "Jestosner",
+  "homepage": "https://github.com/Jestosner/prompt_master",
+  "repository": "https://github.com/Jestosner/prompt_master",
+  "description": "Modular Prompt Systems Architect suite of 14 skills to design, test, evaluate, refine, and token-optimize production prompts and evaluators end-to-end.",
+  "logo": "assets/logo.svg",
+  "suggestedPrompts": [
+    "Use prompt-architect to design a production prompt and evaluator for my workflow",
+    "Audit and score my existing prompt with an evaluation rubric and adversarial test set",
+    "Optimize token usage and cost on my stable prompt without losing quality"
+  ]
+}
